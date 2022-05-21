@@ -148,7 +148,38 @@ Good blog article with further information: [https://cbea.ms/git-commit/](https:
 
 ## Aliases
 
-[TBA]
+Make you life easier by creating aliases for often used git commands.
+
+```bash
+alias gs='git status'
+alias ga='git add '
+alias gb='git branch '
+alias gc='git commit --verbose'
+alias gd='git diff'
+alias gco='git checkout '
+alias gl='git log --graph --decorate --pretty=oneline --abbrev-commit'
+alias grh='git reset --hard HEAD'
+```
+
+Add Linux aliases to your shell configuration:
+
+- Bash shell: `~/.bashrc`
+- Zsh shell: `~/.zshrc`
+- Fish shell: `~/.config/fish/config.fish`
+
+[My git aliases](https://github.com/andreas-bauer/dotfiles/blob/1140290787b326b5b685cc68ee63955d4f633de4/zsh/aliases.zsh#L50)
+
+Git itself has a build-in support for aliases.
+
+```shell
+# configuration
+git config --global alias.co checkout
+
+# usage
+git co
+```
+
+For more information about aliases in Git see the [official documentation](https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases).
 
 ## License
 
