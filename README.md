@@ -49,11 +49,34 @@ cat .git/config
 
 ### Global gitignore file
 
-[TBA]
+A global `.gitignore` file allows you to ignore files and directories in all
+git repositories.
+This is especially useful when the OS creates files or directories that are not
+related to the git project at all,
+like the `.DS_Store` files in macOS or `.Trash` folder in Linux.
+
+Create a `~/.gitignore` file and reference it in the global config (see example above).
+
+```gitignore
+# KDE directory preferences
+.directory
+
+# Linux trash folder
+.Trash-*<Paste>
+
+# macOS DS_Store files
+.DS_Store
+```
+
+[Example global gitignore file](https://github.com/andreas-bauer/dotfiles/blob/master/gitignore)
 
 ### Gitignore templates
 
-[TBA]
+If you are not sure what the `.gitignore` file for a specific language/technology
+should contain you either can use a generator or existing templates.
+
+- [gitignore-generator](https://mrkandreev.name/snippets/gitignore-generator/)
+- [collection of .gitignore templates](https://github.com/github/gitignore)
 
 ## Commit size
 
