@@ -80,7 +80,22 @@ should contain you either can use a generator or existing templates.
 
 ## Commit size
 
-[TBA]
+Git commits represent atomic changes of the codebase.
+Big changes are hard to understand and review by other developers.
+Therefore, you should make multiple small commits instead of one big commit.
+These commits should also follow the Single Responsibility Principle (SRP)
+to further improve the understandability of changes.
+
+Best practices in code reviews regarding the size of code changes [1]:
+
+- "Keep code changes small."
+- "Keep one Pull Request per concern."
+
+Reference:
+
+[1] Dong, L., Zhang, H., Yang, L., Weng, Z., Yang, X., Zhou, X., & Pan, Z. (2021).
+Survey on Pains and Best Practices of Code Review.
+2021 28th Asia-Pacific Software Engineering Conference (APSEC), 482–491. [https://doi.org/10.1109/APSEC53868.2021.00055](https://doi.org/10.1109/APSEC53868.2021.00055)
 
 ## Commit messages
 
