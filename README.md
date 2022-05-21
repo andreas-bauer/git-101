@@ -84,7 +84,51 @@ should contain you either can use a generator or existing templates.
 
 ## Commit messages
 
-[TBA]
+Good commit messages helps other developers to understand the changes in your codebase.
+Therefore, you should explain the what and the why of a change.
+Additionally, commit messages should be consistent to improve the readability.
+
+The commit message should be written in a way that it could
+complete the following sentence:
+
+*If applied, this commit will* `[commit message]`.
+
+Example: *If applied, this commit will* `Add Docker setup for server`.
+
+Some rules for good commit messages:
+
+- Keep subject line short (50 chars)
+- Consistent capitalization (preferred 'Refactor ...' instead of 'refactor ...')
+- Imperative mood ('Add' instead of 'added')
+
+If you want to incorporate more information in a commit message use
+the following format:
+
+```txt
+Add Docker setup for server
+
+* add Dockerfile
+* add docker-compose file
+* remove obsolete Makefile
+```
+
+or
+
+```txt
+Add Docker setup for server
+
+The Docker setup will simplify the handling of the dev and prod environment.
+
+```
+
+If you are working with issues (GitHub, Jira, etc.),
+you should reference the issue if the commit closes an issue.
+This helps to trace issues through the development process
+and gives the commit message more contextual information (why the change).
+
+Example: `Add validation to email input field (closes issue #42)`
+
+Good blog article with further information: [https://cbea.ms/git-commit/](https://cbea.ms/git-commit/).
 
 ## Working in branches
 
