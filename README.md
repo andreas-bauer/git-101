@@ -161,6 +161,10 @@ Good blog article with further information: [https://cbea.ms/git-commit/](https:
 
 [TBA]
 
+## Tags
+
+[TBA]
+
 ## Aliases
 
 Make you life easier by creating aliases for often used git commands.
