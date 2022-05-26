@@ -200,7 +200,7 @@ alias gc='git commit --verbose'
 alias gd='git diff'
 alias gco='git checkout '
 alias gl='git log --graph --decorate --pretty=oneline --abbrev-commit'
-alias grh='git reset --hard HEAD'
+alias gr='git restore '
 ```
 
 Add Linux aliases to your shell configuration:
