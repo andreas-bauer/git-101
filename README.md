@@ -149,9 +149,32 @@ Good blog article with further information: [https://cbea.ms/git-commit/](https:
 
 [TBA]
 
-## Discard changes
+## Undo changes
 
-[TBA]
+You can undo changes on tracked files that are not commited yet with `git restore`.
+
+```shell
+# restore all files in the current folder and its sub-folders
+git restore .
+
+# restore specific files
+git restore README.md
+git restore src/
+git restore '*.js'
+
+# unstage a staged file
+git restore --staged README.md
+```
+
+To remove untracked files from the repository use `git clean`.
+
+```shell
+# remove all untracked files in the tracked directories
+git clean -f
+
+# remove also all files from untracked directories
+git clean -d -f
+```
 
 ## Merge branches
 
