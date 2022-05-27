@@ -182,7 +182,29 @@ git clean -d -f
 
 ## Fix ups (rebase)
 
-[TBA]
+A clean git commit history helps to better understand the changes on the codebase.
+Commits that only fix other commits bloating the commit history.
+Typical examples are typo or code style fixes.
+
+To maintain a clean git commit history, you should mark fix commits with the
+`--fixup` argument and rebase the branch.
+
+```shell
+# git commit history (git log)
+# * 8d3f6c2 (HEAD -> main) Change title
+# * 632d1a5 Fix linter issues for introduction section
+# * 9a1a989 Fix typos in introduction section
+# * f37396e Add introduction section
+# * adfe739 Add license section
+
+# create a fixup for commit 42ad722
+git commit --fixup 42ad722
+
+# rebase last 4 commits
+git rebase --autosquash --interactive HEAD~4
+```
+
+❗️Don't rebase already pushed commits.
 
 ## Tags
 
