@@ -145,10 +145,6 @@ Example: `Add validation to email input field (closes issue #42)`
 
 Good blog article with further information: [https://cbea.ms/git-commit/](https://cbea.ms/git-commit/).
 
-## Working in branches
-
-[TBA]
-
 ## Undo changes
 
 You can undo changes on tracked files that are not commited yet with `git restore`.
@@ -244,6 +240,75 @@ git co
 ```
 
 For more information about aliases in Git see the [official documentation](https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases).
+
+## Workflows with GitHub
+
+### Working in branches
+
+Git enables complex branching models as demonstrated [here](./assets/Git-branching-model.pdf),
+but you shouldn't introduce a complex branching model in your project if not necessary.
+
+A simple branching strategy based on `dev` and `feature` branches is sufficient
+in most cases.
+
+In a `dev` (development) branch ...
+
+```mermaid
+gitGraph
+commit
+branch dev
+commit
+checkout main
+merge dev
+checkout dev
+commit
+commit
+checkout main
+merge dev
+checkout dev
+commit
+checkout main
+merge dev
+```
+
+*With a feature branch workflow* all development happens in
+dedicated branches instead of the `main` branch.
+
+```mermaid
+gitGraph
+commit
+commit
+branch feature-1
+branch feature-2
+checkout feature-2
+commit
+checkout feature-1
+commit
+commit
+checkout main
+merge feature-1
+checkout feature-2
+commit
+checkout main
+merge feature-2
+commit
+branch bugfix
+commit
+checkout main
+merge bugfix
+```
+
+Feature branches should...
+
+- have a clear focus or purpose (single-responsibility principle)
+- be small
+- have a short lifetime
+- be tested before merged into the `main` branch
+- be merged via a pull requests
+
+This allows a collaborative workflow based on pull requests with code reviews.
+
+### Pull Requests / Merge Requests
 
 ## License
 
