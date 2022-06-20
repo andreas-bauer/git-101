@@ -308,7 +308,23 @@ Feature branches should...
 
 This allows a collaborative workflow based on pull requests with code reviews.
 
-### Pull Requests / Merge Requests
+### Pull requests / merge requests
+
+### WIP (Draft) pull requests
+
+You can use a draft pull request to start an early discussion about a feature
+that is work-in-progress (WIP).
+Draft pull requests cannot be merged.
+
+When creating a pull request, select `Create draft pull request` (see screenshot).
+
+![create draft pull request](./assets/github-create-draft-pr.png)
+
+After the author removes the draft status of the pull request, merging becomes possible.
+
+![draft pull request](./assets/github-draft-pr.png)
+
+In Gitlab, the prefix `WIP:` marks merge requests (pull requests) as work-in-progress.
 
 ## License
 
