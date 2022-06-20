@@ -113,7 +113,7 @@ Example: *If applied, this commit will* `Add Docker setup for server`.
 Some rules for good commit messages:
 
 - Keep subject line short (50 chars)
-- Consistent capitalization (preferred 'Refactor ...' instead of 'refactor ...')
+- Consistent capitalization (preferred 'Refactor …' instead of 'refactor …')
 - Imperative mood ('Add' instead of 'added')
 
 If you want to incorporate more information in a commit message use
@@ -251,7 +251,7 @@ but you shouldn't introduce a complex branching model in your project if not nec
 A simple branching strategy based on `dev` and `feature` branches is sufficient
 in most cases.
 
-In a `dev` (development) branch ...
+In a `dev` (development) branch …
 
 ```mermaid
 gitGraph
@@ -298,7 +298,7 @@ checkout main
 merge bugfix
 ```
 
-Feature branches should...
+Feature branches should …
 
 - have a clear focus or purpose (single-responsibility principle)
 - be small
@@ -328,6 +328,6 @@ In Gitlab, the prefix `WIP:` marks merge requests (pull requests) as work-in-pro
 
 ## License
 
-Copyright (c) 2022 Andreas Bauer
+Copyright © 2022 Andreas Bauer
 
 This work is licensed under [CC BY-SA 4.0](./LICENSE).
