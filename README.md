@@ -172,10 +172,6 @@ git clean -f
 git clean -d -f
 ```
 
-## Merge branches
-
-[TBA]
-
 ## Fix ups (rebase)
 
 A clean git commit history helps to better understand the changes on the codebase.
