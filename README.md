@@ -50,9 +50,9 @@ cat .git/config
 ### Global gitignore file
 
 A global `.gitignore` file allows you to ignore files and directories in all
-git repositories.
+Git repositories.
 This is especially useful when the OS creates files or directories that are not
-related to the git project at all,
+related to the Git project at all,
 like the `.DS_Store` files in macOS or `.Trash` folder in Linux.
 
 Create a `~/.gitignore` file and reference it in the global config (see example above).
@@ -174,11 +174,11 @@ git clean -d -f
 
 ## Fix ups (rebase)
 
-A clean git commit history helps to better understand the changes on the codebase.
+A clean Git commit history helps to better understand the changes on the codebase.
 Commits that only fix other commits bloating the commit history.
 Typical examples are typo or code style fixes.
 
-To maintain a clean git commit history, you should mark fix commits with the
+To maintain a clean Git commit history, you should mark fix commits with the
 `--fixup` argument and rebase the branch.
 
 ```shell
@@ -200,7 +200,7 @@ git rebase --autosquash --interactive HEAD~4
 
 ## Aliases
 
-Make you life easier by creating aliases for often used git commands.
+Make you life easier by creating aliases for often used Git commands.
 
 ```bash
 alias gs='git status'
