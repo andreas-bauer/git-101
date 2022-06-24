@@ -310,6 +310,84 @@ This allows a collaborative workflow based on pull requests with code reviews.
 
 ### Pull requests / merge requests
 
+Github allows three different types to merge pull requests
+that impact the Git history in different ways.
+
+- Merge commit
+- Rebase and merge
+- Squash and merge
+
+To demonstrate the differences in merge outcome we will use the following setup:
+A feature branch with multiple commits shall be merged into the main branch.
+
+```mermaid
+gitGraph
+commit id:"a"
+commit id:"b"
+branch feature
+checkout feature
+commit id:"c" type: HIGHLIGHT
+commit id:"d" type: HIGHLIGHT
+checkout main
+```
+
+#### Merge commit
+
+The feature branch and its commits will be joined together with the main branch.
+
+- Github's default merge strategy
+- Git commit history is not as streamlined as with other merging strategies
+- uncomplicated roll back of features
+- default commit message “Merge pull request” is not helpful to understand changes
+
+```mermaid
+gitGraph
+commit id:"a"
+commit id:"b"
+branch feature
+checkout feature
+commit id:"c" type: HIGHLIGHT
+commit id:"d" type: HIGHLIGHT
+checkout main
+merge feature
+```
+
+#### Rebase and merge
+
+All commits of the feature branch will be added to the
+main branch individually without a merge commit.
+
+- rewrites Git commit history
+- maintains a linear commit history
+- force-push is sometimes required due to the rewrite of the commit history
+- force-push on public repositories is not recommended
+- most flexible solution
+
+```mermaid
+gitGraph
+commit id:"a"
+commit id:"b"
+commit id:"c" type: HIGHLIGHT
+commit id:"d" type: HIGHLIGHT
+```
+
+#### Squash and merge
+
+All commits of the feature branch will be squashed into a
+single commit that will be added to the main branch.
+
+- maintains a linear commit history
+- uncomplicated roll back of features
+- losing detailed commits in commit history
+- fine for small changes, but problematic for long-running branches
+
+```mermaid
+gitGraph
+commit id:"a"
+commit id:"b"
+commit id:"cd" type: HIGHLIGHT
+```
+
 ### WIP (Draft) pull requests
 
 You can use a draft pull request to start an early discussion about a feature
