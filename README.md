@@ -1,4 +1,4 @@
-# git-101
+# Git 101
 
 ## Configuration (global and project scope)
 
