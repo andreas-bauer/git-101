@@ -202,10 +202,6 @@ git rebase --autosquash --interactive HEAD~4
 
 ❗️Don't rebase already pushed commits.
 
-## Tags
-
-[TBA]
-
 ## Aliases
 
 Make you life easier by creating aliases for often used git commands.
