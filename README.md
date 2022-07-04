@@ -396,6 +396,31 @@ After the author removes the draft status of the pull request, merging becomes p
 
 In Gitlab, the prefix `WIP:` marks merge requests (pull requests) as work-in-progress.
 
+### Keep a fork up-to-date
+
+If you work on a repository fork, you need to fetch and merge upstream changes
+to keep your fork up-to-date with the repository you forked from.
+
+You can use GitHub's UI (see screenshot), or Git commands (see code snippet)
+to fetch and merge changes from the upstream repository.
+
+![sync branch with fork](./assets/github-sync.png)
+
+```shell
+# add fork as remote with the name "upstream"
+git remote add upstream https://github.com/andreas-bauer/git-101.git
+
+# to check all remote targets
+git remote -v
+
+# fetch changes from remote
+git fetch upstream
+
+# merge changes of a remote branch into the current branch
+git merge upstream/main
+
+```
+
 ## License
 
 Copyright © 2022 Andreas Bauer
