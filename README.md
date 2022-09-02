@@ -78,9 +78,41 @@ should contain you either can use a generator or existing templates.
 - [gitignore-generator](https://mrkandreev.name/snippets/gitignore-generator/)
 - [collection of .gitignore templates](https://github.com/github/gitignore)
 
-## Commit size
+## Commits
 
 Git commits represent atomic changes of the codebase.
+You can commit staged files to the repository using `git commit`.
+
+If you want to add changes to a previous commit without creating a new commit
+you can use the `--ammend` argument.
+This is helpful if you want to fix a typo you missed in the previous commit.
+
+With the argument `--verbose` all changes will be presented as a diff and
+you will be able to write commit messages that consist of multiple lines.
+
+```shell
+# stage a specific file
+git add README.md
+
+# stage all files that are not ignored
+git add *
+
+# stage all files of a folder
+git add src/
+
+# create commit with a commit message
+git commit -m "Add CI workflow"
+
+# add changes to previous commit instead of creating a new commit
+git commit --amend
+
+# show the full diff of the changes before commting
+git commit --verbose
+
+```
+
+## Commit size
+
 Big changes are hard to understand and review by other developers.
 Therefore, you should make multiple small commits instead of one big commit.
 These commits should also follow the Single Responsibility Principle (SRP)
