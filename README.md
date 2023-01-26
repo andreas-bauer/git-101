@@ -210,22 +210,39 @@ A clean Git commit history helps to better understand the changes on the codebas
 Commits that only fix other commits bloating the commit history.
 Typical examples are typo or code style fixes.
 
-To maintain a clean Git commit history, you should mark fix commits with the
-`--fixup` argument and rebase the branch.
-
 ```shell
+# BAD: The Git history is cluttered with commits that fix previous commits
 # git commit history (git log)
 # * 8d3f6c2 (HEAD -> main) Change title
 # * 632d1a5 Fix linter issues for introduction section
 # * 9a1a989 Fix typos in introduction section
-# * f37396e Add introduction section
 # * adfe739 Add license section
+# * f37396e Add introduction section
+```
 
-# create a fixup for commit 42ad722
-git commit --fixup 42ad722
+To maintain a clean Git commit history, you should mark fix commits with the
+`--fixup` argument and rebase the branch.
+Whereas fixup expects a reference (hash) to a previous commit.
+
+```shell
+# create a fixup for commit f37396e
+git commit --fixup f37396e
+
+# git commit history (git log)
+# * 8d3f6c2 (HEAD -> main) Change title
+# * 632d1a5 Fixup! add introduction section
+# * 9a1a989 Fixup! add introduction section
+# * adfe739 Add license section
+# * f37396e Add introduction section
 
 # rebase last 4 commits
 git rebase --autosquash --interactive HEAD~4
+
+# Rebase resulted in a clean commit history
+# git commit history (git log)
+# * 8d3f6c2 (HEAD -> main) Change title
+# * adfe739 Add license section
+# * f37396e Add introduction section
 ```
 
 ❗️Don't rebase already pushed commits.
