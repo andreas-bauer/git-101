@@ -470,6 +470,28 @@ git merge upstream/main
 
 ```
 
+### Commits by multiple authors
+
+In cases where multiple authors worked together on a commit
+, like it is the case with pair programming,
+only one person will be visible in the Git logs.
+To make contributions of other authors visible in the GitHub stats
+you can use the keyword `Co-authored-by:` as part of the commit message.
+
+This is especially useful in team-based student projects.
+
+Incorporate multiple author information in a commit message use
+the following format:
+
+```txt
+Add integration tests for REST API
+
+Co-authored-by: NAME <NAME@EXAMPLE.COM>
+Co-authored-by: AUTHOR-NAME <ANOTHER-NAME@EXAMPLE.COM>"
+```
+
+See the [GitHub Docs](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/creating-a-commit-with-multiple-authors) for more information.
+
 ## License
 
 Copyright © 2022 Andreas Bauer
