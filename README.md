@@ -494,6 +494,6 @@ See the [GitHub Docs](https://docs.github.com/en/pull-requests/committing-change
 
 ## License
 
-Copyright © 2022 Andreas Bauer
+Copyright © 2022-2023 Andreas Bauer
 
 This work is licensed under [CC BY-SA 4.0](./LICENSE).
