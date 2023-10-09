@@ -100,6 +100,9 @@ git add *
 # stage all files of a folder
 git add src/
 
+# stage parts of files for partial commits
+git add -p
+
 # create commit with a commit message
 git commit -m "Add CI workflow"
 
